@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portfolio</title>
+    <style></style>
+  </head>
+  <body>
+    <header id="home">
+      <h1>Anshu Kumar</h1>
+      <p>Student | IITI | CSE | Btech</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hi, I an Anshu Kumar persuing Btech. degree in Computer Science from Indian Institute of Technology, Indore</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Git</div>
+        <div class="skill">React</div>
+        <div class="skill">Unity</div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-card">
+        <h3>Vortex</h3>
+        <p>A video streaming/cinema management app like netflix made with react.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Remnant</h3>
+        <p>A 2D zombie shooter game made with Unity, inspired by boxhead.</p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>If you'd like to reach out, feel free to drop me a mail.</p>
+      <a class="contact-btn" href="mailto:cse240001010@iiti.ac.in">Email Me</a>
+    </section>
+
+    <footer>Thanks for giving you time to read all this!</footer>
+
+    <script>
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(e.target.getAttribute("href"));
+          window.scrollTo({ top: target.offsetTop - 20, behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
